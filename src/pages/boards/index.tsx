@@ -9,7 +9,6 @@ const Boards = () => {
 
   const handleDragEnd = (event: any) => {
     const { active, over } = event
-
     if (!over) return
 
     const sourceColumnId = active.data.current?.columnId
@@ -21,33 +20,26 @@ const Boards = () => {
     const card = columns[sourceColumnId].items.find(
       (item: any) => item.id === active.id
     )
-
     if (!card) return
 
     setColumns(prev => {
       const sourceItems = prev[sourceColumnId].items.filter(
         (item: any) => item.id !== active.id
       )
-
       const targetItems = [...prev[targetColumnId].items, card]
 
       return {
         ...prev,
-        [sourceColumnId]: {
-          ...prev[sourceColumnId],
-          items: sourceItems,
-        },
-        [targetColumnId]: {
-          ...prev[targetColumnId],
-          items: targetItems,
-        },
+        [sourceColumnId]: { ...prev[sourceColumnId], items: sourceItems },
+        [targetColumnId]: { ...prev[targetColumnId], items: targetItems },
       }
     })
   }
 
   return (
     <DndContext onDragEnd={handleDragEnd}>
-      <div className="w-full flex items-start justify-between px-5 pb-8 md:gap-0 gap-10">
+      {/* Container responsivo: flex-col em mobile, flex-row em desktop */}
+      <div className="w-full flex flex-col md:flex-row items-start gap-5 px-5 pb-8">
         {Object.entries(columns).map(([columnId, column]: any) => (
           <Column key={columnId} id={columnId} column={column} />
         ))}
@@ -59,28 +51,24 @@ const Boards = () => {
 export default Boards
 
 const Column = ({ id, column }: any) => {
-  const { setNodeRef } = useDroppable({
-    id,
-  })
+  const { setNodeRef } = useDroppable({ id })
 
   return (
     <div
       ref={setNodeRef}
-      className="w-full flex flex-col p-4"
+      className="flex flex-col flex-1 min-w-[250px] p-4 bg-gray-50 rounded-lg shadow-sm bg-white/50"
     >
-      <div 
+      <h2 className="flex items-center justify-center py-[10px] w-full bg-white rounded-lg shadow-sm text-[#555] font-medium text-[15px] mb-5 font-semibold">
+        {column.name}
+      </h2>
 
-      className="flex flex-col md:w-[290px] w-[250px] gap-3 items-center">
-
-      </div>
-      <h2 className="flex items-center justify-center py-[10px] w-full bg-white rounded-lg shadow-sm text-[#555] font-medium text-[15px] mb-5 font-semibold">{column.name}</h2>
-
-      {column.items.map((task: any, index:any) => (
+      {column.items.map((task: any) => (
         <Card key={task.id} id={task.id} columnId={id} item={task} />
       ))}
-      <div className="flex cursor-pointer items-center justify-center gap-1 py-[10px]  w-full bg-white rounded-lg shadow-sm text-[#555] text-[15px]">
+
+      <div className="flex cursor-pointer items-center justify-center gap-1 py-[10px] w-full bg-white rounded-lg shadow-sm text-[#555] text-[15px] mt-3">
         <IoIosAdd />
-        Adicionar tarefa</div>
+      </div>
     </div>
   )
 }
@@ -88,9 +76,7 @@ const Column = ({ id, column }: any) => {
 const Card = ({ id, columnId, item }: any) => {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id,
-    data: {
-      columnId,
-    },
+    data: { columnId },
   })
 
   const style = {
@@ -105,9 +91,9 @@ const Card = ({ id, columnId, item }: any) => {
       style={style}
       {...listeners}
       {...attributes}
-      className="bg-white p-3 mb-3 rounded shadow cursor-pointer"
+      className="bg-white p-3 mb-3 rounded shadow cursor-pointer w-full"
     >
-      {item.content}
+      {item.title}
     </div>
   )
 }
