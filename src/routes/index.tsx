@@ -1,6 +1,7 @@
 import type { RouteObject } from "react-router";
 import Layout from "../layout";
 import Boards from "../pages/boards";
+import Home from "../pages/Home";
 
 const routes: RouteObject[] = [
     {
@@ -15,7 +16,7 @@ const routes: RouteObject[] = [
                 },
                 {
                     path:"/home",
-                    element: <Boards/>,
+                    element: <Home/>,
                 }
             ]
             }]

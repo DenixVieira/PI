@@ -1,11 +1,27 @@
-import { DndContext, useDroppable, useDraggable } from "@dnd-kit/core"
+import { DndContext, useDroppable } from "@dnd-kit/core"
 import { useState } from "react"
-import { Columns } from "../../types"
+import type { Columns } from "../../types"
 import { Board } from "../../data/board"
 import { IoIosAdd } from "react-icons/io";
+import Card from "../../components/Cards";
 
 const Boards = () => {
   const [columns, setColumns] = useState<Columns>(Board)
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedColumn, setSelectedColumn] = useState("");
+
+  const openModal = () => {
+    setSelectedColumn(columnid);
+    setModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+
+  const handleViewTask = (task) => {
+    
+  }
 
   const handleDragEnd = (event: any) => {
     const { active, over } = event
@@ -51,49 +67,25 @@ const Boards = () => {
 export default Boards
 
 const Column = ({ id, column }: any) => {
-  const { setNodeRef } = useDroppable({ id })
+  const { setNodeRef } = useDroppable({ id });
 
   return (
     <div
       ref={setNodeRef}
-      className="flex flex-col flex-1 min-w-[250px] p-4 bg-gray-50 rounded-lg shadow-sm bg-white/50"
+      className="flex flex-col flex-1 min-w-[250px] p-4 bg-gray-50 rounded-lg shadow-sm bg-white/50 mt-4"
     >
-      <h2 className="flex items-center justify-center py-[10px] w-full bg-white rounded-lg shadow-sm text-[#555] font-medium text-[15px] mb-5 font-semibold">
+      <h2 className="flex items-center justify-center py-[10px] w-full text-white bg-sky-800 rounded-lg shadow-sm text-[#555] font-medium text-[15px] mb-5 font-semibold">
         {column.name}
       </h2>
+      <div className="flex cursor-pointer items-center justify-center gap-1 py-[10px] w-full bg-white rounded-lg shadow-sm text-[#555] text-[15px] mb-3">
+        <IoIosAdd />
+        <span>Arraste para adicionar</span>
+      </div>
 
       {column.items.map((task: any) => (
-        <Card key={task.id} id={task.id} columnId={id} item={task} />
+        <Card key={task.id} columnId={id} task={task} />
       ))}
 
-      <div className="flex cursor-pointer items-center justify-center gap-1 py-[10px] w-full bg-white rounded-lg shadow-sm text-[#555] text-[15px] mt-3">
-        <IoIosAdd />
-      </div>
-    </div>
-  )
-}
-
-const Card = ({ id, columnId, item }: any) => {
-  const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id,
-    data: { columnId },
-  })
-
-  const style = {
-    transform: transform
-      ? `translate3d(${transform.x}px, ${transform.y}px, 0)`
-      : undefined,
-  }
-
-  return (
-    <div
-      ref={setNodeRef}
-      style={style}
-      {...listeners}
-      {...attributes}
-      className="bg-white p-3 mb-3 rounded shadow cursor-pointer w-full"
-    >
-      {item.title}
     </div>
   )
 }

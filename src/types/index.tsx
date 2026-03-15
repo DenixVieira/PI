@@ -1,13 +1,15 @@
 export type TaskT = {
-    id:string;
-    solicitante: string
+    id: string;
+    protocolo: string;
+    solicitante: string;
     departamento: string;
     titulo: string;
     descricao: string;
     prioridade: string;
-    imagem?:string;
-    alt?:string;
-    tags:{titulo:string; bg:string; text: string } [];
+    imagem?: string;
+    alt?: string;
+    responsavel?: [];
+    tags: { titulo: string; bg: string; text: string }[];
 }
 
 type Column = {
@@ -16,5 +18,5 @@ type Column = {
 }
 
 export type Columns = {
-    [key:string] : Column
+    [key: string]: Column
 }

@@ -10,53 +10,184 @@ export const Board: Columns = {
 		name: "Backlog",
 		items: [
 			{
+
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
-				priority: "medium",
-				deadline: 50,
-				// image: taskImage2,
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aquizxzczxczxczxcxzczxcxzczxczxfsdtfdhgdfghjgrfjytghkd oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
 				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
 				tags: [
 					{ title: "Test", ...getRandomColors() },
 					{ title: "Front", ...getRandomColors() },
 				],
 			},
 			{
+
 				id: uuidv4(),
-				title: "Admin Panel Back-end",
-				description: "Lorem ipsum dolor sit amet ..",
-				priority: "low",
-				deadline: 50,
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
 				tags: [
 					{ title: "Test", ...getRandomColors() },
 					{ title: "Front", ...getRandomColors() },
 				],
 			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+
 		],
 	},
 	pending: {
-		name: "Pending",
+		name: "Pendente",
 		items: [
 			{
+
 				id: uuidv4(),
-				title: "Admin Panel Back-end",
-				description: "Lorem ipsum dolor sit amet ..",
-				priority: "high",
-				deadline: 50,
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
 				tags: [
 					{ title: "Test", ...getRandomColors() },
 					{ title: "Front", ...getRandomColors() },
 				],
 			},
 			{
+
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
-				priority: "low",
-				deadline: 50,
-				// image: taskImage,
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
 				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
 				tags: [
 					{ title: "Test", ...getRandomColors() },
 					{ title: "Front", ...getRandomColors() },
@@ -65,43 +196,88 @@ export const Board: Columns = {
 		],
 	},
 	todo: {
-		name: "To Do",
+		name: "Fazendo",
 		items: [
 			{
+
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
-				priority: "medium",
-				deadline: 50,
-				// image: taskImage3,
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Baixa",
+				// imagem?: string;
 				alt: "task image",
-				tags: [
-					{ title: "Test", ...getRandomColors() },
-					{ title: "Front", ...getRandomColors() },
-				],
-			},
-		],
-	},
-	doing: {
-		name: "Doing",
-		items: [
-			{
-				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
-				priority: "low",
-				deadline: 50,
+				responsavel: ["pedro", "Thiago", "joão"],
 				tags: [
 					{ title: "Test", ...getRandomColors() },
 					{ title: "Front", ...getRandomColors() },
 				],
 			},
 			{
+
 				id: uuidv4(),
-				title: "Admin Panel Back-end",
-				description: "Lorem ipsum dolor sit amet ..",
-				priority: "medium",
-				deadline: 50,
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Baixa",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Baixa",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
 				tags: [
 					{ title: "Test", ...getRandomColors() },
 					{ title: "Front", ...getRandomColors() },
@@ -110,16 +286,88 @@ export const Board: Columns = {
 		],
 	},
 	done: {
-		name: "Done",
+		name: "Feito",
 		items: [
 			{
+
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
-				priority: "high",
-				deadline: 50,
-				// image: taskImage,
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
 				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
+				tags: [
+					{ title: "Test", ...getRandomColors() },
+					{ title: "Front", ...getRandomColors() },
+				],
+			},
+			{
+
+				id: uuidv4(),
+				protocolo: "1234565",
+				solicitante: "biruleibe",
+				departamento: "chupingole",
+				titulo: "titulo aqui oh",
+				descricao: "testando desc",
+				prioridade: "Media",
+				// imagem?: string;
+				alt: "task image",
+				responsavel: ["pedro", "Thiago", "joão"],
 				tags: [
 					{ title: "Test", ...getRandomColors() },
 					{ title: "Front", ...getRandomColors() },
