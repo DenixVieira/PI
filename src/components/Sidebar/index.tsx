@@ -43,7 +43,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         <IoIosArrowDroprightCircle
           size="20px"
           color="#222"
-          className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+          className={`transition-transform ${isOpen ? "rotate-180" : ""} cursor-pointer`}
           onClick={() => setIsOpen(!isOpen)}
         />
         {/* <TiThMenuOutline
@@ -73,7 +73,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           </Link>
         ))}
 
-        <div className="flex items-center gap-3 rounded-lg hover:bg-sky-400 hover:text-white transition-colors duration-200 px-2 py-3 cursor-pointer bg-gray-200 mt-auto whitespace-nowrap">
+        {/* <div className="flex items-center gap-3 rounded-lg hover:bg-sky-400 hover:text-white transition-colors duration-200 px-2 py-3 cursor-pointer bg-gray-200 mt-auto whitespace-nowrap">
 
           <BiLogOut className="text-[20px] flex-shrink-0" />
 
@@ -84,7 +84,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             Sair
           </span>
 
-        </div>
+        </div> */}
 
       </div>
     </div>

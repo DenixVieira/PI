@@ -40,7 +40,7 @@ const Card = ({ columnId, task }: TaskProps) => {
       {/* Alça de arrastar */}
       <div
         {...listeners}
-        className="cursor-grab mb-2 flex items-center gap-1 text-gray-500"
+        className="cursor-grab mb-2 flex items-center gap-1 text-gray-500 bg-gray-100 rounded-lg"
         title="Segure e arraste"
       >
         <MdDragIndicator size={20} />
